@@ -9,7 +9,7 @@
         border:1px solid black; 
         }
       th{
-
+	border:1px solid black;
 	}
       td {
 	text-align:center;
@@ -43,15 +43,12 @@
 	    $E6_Temp = $output[6];
 	    $E7_Temp = $output[7];
 	    $E8_Temp = $output[8];
-	    echo $output[0];
-	    echo $output[1];
-	    echo $output[2];
 	    socket_close($result);
 	    socket_close($socket);
     ?>
 
     <h1>Pump Diagnostics</h1>
-    <table style="width:35%">
+    <table style="width:45%">
       <tr>
         <th style="border:1px solid black">Pumps</th>
         <th style="border:1px solid black">Pump Temperature</th>

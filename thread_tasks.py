@@ -11,7 +11,6 @@ HOST = sys.argv[1]
 BB_PORT = 6666
 WP_PORT = 8888
 FILE_NAME = "logs.txt"
-TEST = 'hey'
 
 def log_handler(sock):
     f = open(FILE_NAME, "a")
@@ -30,7 +29,6 @@ def log_handler(sock):
 
 def bb_thread():
     global DATA
-    global TEST
     print(f'Thread {current_thread().getName()}')
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as s:
         s.bind((HOST, BB_PORT))
@@ -54,7 +52,7 @@ def bb_thread():
 
 
 def wp_thread():
-    sleep(2)
+    sleep(0.5)
     print(f'Thread {current_thread().getName()}')
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as s:
         s.bind((HOST, WP_PORT))
