@@ -2,9 +2,9 @@ import socket
 from time import sleep
 import sys
 
-SERVER = '172.16.100.232' 
+SERVER = sys.argv[1] 
 PORT = 6666
-data = sys.argv[1]
+data = [111, 222, 333, 444, 555, 666, 777, 888, 999]
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as s:
     s.connect((SERVER, PORT))
     print(f'Connected to server: {SERVER}')
